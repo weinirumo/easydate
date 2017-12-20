@@ -1,0 +1,17 @@
+{
+    "name": "weini/easydate",
+    "license": "bsd-3",
+    "authors": [
+        {
+            "name": "Weini",
+            "email": "weinirumo@126.com"
+        }
+    ],
+    "require": {},
+    "autoload":{
+        "psr-4": {
+            "weini\\easydate\\": "src"
+        }
+    }
+
+}
