@@ -1,6 +1,11 @@
 # easydate
 方便快捷的获取指定年月日的开始和结束时间戳
 
+通过composer安装：
+```
+composer require weinirumo/easydate
+```
+
 使用步骤：
 1. 直接调用EasyDate的实例方法；或者使用EasyDate::create()获取EasyDate的实例。
 2. 使用since()方法设置开始时间点，并重置结束时间点；或者使用from()方法设置开始时间点，from方法不会重置结束时间点。
