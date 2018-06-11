@@ -74,11 +74,12 @@ EasyDate::create()->since('2016-6-8')->getPastDays(); // 733 since方法会自�
 // 获取从2016-6-8到现在过去了多少个月
 $since = '2016-8-8';
 $pastMonths = EasyDate::create()->since($since)->getPastMonths();
-echo '从'.$since.'到现在过去了'.$pastMonths.'个月';
+echo '从'.$since.'到现在过去了'.$pastMonths.'个月'; // 从2016-8-8到现在过去了22个月
 
 ```
 
 ```
+// 获取从2016-8-8到现在过去了几年
 $since = '2016-8-8';
 $pastYears = EasyDate::create()->since($since)->getPastYears();
 $pastFullYears = EasyDate::create()->since($since)->getPastFullYears();
