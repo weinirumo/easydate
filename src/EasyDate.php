@@ -192,5 +192,29 @@ class EasyDate
         ];
     }
 
+    public function getMonthBySteps($num)
+    {
+        $res = [];
+        for($i = 1; $i <= $num;$i++) {
+            $res[] = $this->getSeveralMonthsLater($this->from,$i);
+        }
+        return $res;
+    }
+
+    public function getSeveralMonthsLater($start,$num)
+    {
+        $year = date('Y',$start);
+        $month = date('m',$start);
+        $day = date('d',$start);
+        $hourMinSec = date('H:i:s', $start);
+        $month = $month + $num;
+        $pastYear = floor($month / 12);
+        $tmp = ($year + $pastYear) . '/' . ($month - $pastYear * 12) . '/10';
+        $lastDayOfMonth = date('t',strtotime($tmp));
+        $day = $lastDayOfMonth > $day ? $day:$lastDayOfMonth;
+        $res = date("Y/m/".$day . ' '.$hourMinSec,strtotime($tmp));
+        return $res;
+    }
+
 
 }
