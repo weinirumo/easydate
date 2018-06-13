@@ -1,6 +1,7 @@
 {
     "name": "weini/easydate",
-    "license": "bsd-3",
+    "license": "BSD-3-Clause",
+    "description": "make it easy to deal with date and timestamp",
     "authors": [
         {
             "name": "Weini",
